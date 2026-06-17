@@ -3,9 +3,22 @@ using namespace std;
  void intersection(int arr1[],int arr2[], int size1, int size2){
     cout<<"the inersection of the 2 arrays is";
     for(int i=0;i<size1;i++){
+        bool flag=false;
+         for(int k = 0; k < i; k++)
+        {
+            if(arr1[i] == arr1[k])
+            {
+                flag = true;
+                break;
+            }
+        }
+
+        if(flag)
+            continue;
         for(int j=0;j<size2; j++){
             if(arr1[i]==arr2[j]){
                 cout<<arr1[i]<<" ";
+                
                 break;
             }
         }
